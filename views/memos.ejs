@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Memos</title>
+	<link rel="stylesheet" type="text/css" href="checklist.css">
+	<link href="https://fonts.googleapis.com/css?family=Sirin+Stencil|Supermercado+One" rel="stylesheet">
+	<script
+			  src="https://code.jquery.com/jquery-3.2.1.min.js"
+			  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+			  crossorigin="anonymous"></script>
+	<script src="https://use.fontawesome.com/a2e6c95c8f.js"></script>
+
+</head>
+<body>
+<div class="display">
+    Welcome back, <%= currentUser %> ! 
+    <span id="space">  </span>
+    <a class="signout" href="/logout">Sign Out</a>
+    </div>
+<h1>- Memos -</h1>
+<hr>
+<form action="/memos" method="POST" enctype="application/x-www-form-urlencoded"> 
+<table style="width:100%">
+<% memos.forEach(function(memo){ %>
+	<tr><td>
+		<div value="<%=memo.desc%>")>
+		<span><i class="fa fa-trash-o" aria-hidden="true"></i></span><%=memo.desc%></div>
+	</td></tr>
+<% }); %>
+</table>
+<input type="hidden" name="memos" id="memos" value="<%=JSON.stringify(memos)%>"/>
+<table style="width:100%">
+	<div>
+		<td class="newrow">
+
+		</td>
+	</div>
+</table>
+
+
+<ul class="buttons">
+	<p>
+		<label for"newmemo">Add a new memo: </label>
+		<input class="inputbox" id="newmemo" type="text" name="newmemo" placeholder="Memo">
+		<button id="add" type="button" class="buttonstyle">Add</button>
+	</p>
+	<p>
+		<button id="save" class="buttonstyle" type="submit">Save Memos</button>
+	</p>
+	<a href="guide_page"><i class="fa fa-paper-plane" aria-hidden="true"></i> Return to the Guide Page</a>
+</ul>
+</form>
+
+<script type="text/javascript" src="scripts/memos.js"></script>
+<% include partials/footer %>

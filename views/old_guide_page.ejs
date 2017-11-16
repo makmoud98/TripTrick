@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <base target="_blank">
+  <title>Guide page</title>
+  <link rel="stylesheet" type="text/css" href="public/css/guide_page.css">
+  <link href="https://fonts.googleapis.com/css?family=Sirin+Stencil|Supermercado+One" rel="stylesheet">
+  <script
+			  src="https://code.jquery.com/jquery-3.2.1.min.js"
+			  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+			  crossorigin="anonymous"></script>
+  <script src="https://use.fontawesome.com/a2e6c95c8f.js"></script>
+
+</head>
+<body>
+<header>
+  <a class="signout" href="/logout">Sign Out</a>
+  <h1>- Start Planning your Trip -</h1>
+  <hr>
+</header>
+<table style="width:100%">
+  <tr>
+  <td class="st midline">
+    <p class="title">
+      - Step One -
+    </p>
+     <!-- googlemap -->
+    <div id="googlemap"></div>
+    <iframe
+      width="300" height="180"
+      frameborder="0" style="border:0"
+      src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAZyyTDcmHSTbqQuMzDeiZnB_0dzFebdpU&q=Space+Needle,Seattle+WA" allowfullscreen>
+    </iframe>
+    <p><a href="https://www.google.com/maps/@42.0046787,-87.6482463,15z">Click me: Map Your Trip</a></p>
+    <form>
+      <label for "map">Paste the URL of your finished map here:</label>
+      <input class="inputbox" id="map" type="url" name="map" placeholder="paste URL here">
+
+      <p>
+        <button class="buttonstyle" type="submit">Submit it</button>
+      </p>
+    </form>
+  </td>
+  <td class="st">
+  <p class="title">- Map preview -</p>
+    <!-- image of user's map -->
+    <img src="https://maps.googleapis.com/maps/api/staticmap?center=Brooklyn+Bridge,New+York,NY&zoom=13&size=600x300&maptype=roadmap
+&markers=color:blue%7Clabel:S%7C40.702147,-74.015794&markers=color:green%7Clabel:G%7C40.711614,-74.012318
+&markers=color:red%7Clabel:C%7C40.718217,-73.998284
+&key=AIzaSyAZyyTDcmHSTbqQuMzDeiZnB_0dzFebdpU" height="180" width="300">
+  </td>
+  </tr>
+  <tr>
+    <td class="st2 midline">
+      <p class="title">
+        - Step Two -
+    </p>
+    <form>
+      <p>Please choose a site to book your flight (if you need to):</p>
+      <ul>
+        <li class="extLink"><a href="https://www.priceline.com">Priceline</a></li>
+        <li class="extLink"><a href="https://www.expedia.com">Expedia</a></li>
+        <li class="extLink"><a href="https://www.kayak.com">Kayak</a></li>
+        <li class="extLink"><a href="http://www.booking.com/index.html?label=gen173nr-1FCAEoggJCAlhYSDNiBW5vcmVmcgV1c19pbIgBAZgBMrgBB8gBDdgBAegBAfgBC6gCAw;sid=4ea7efe512c1815c383d093aa1dbc9eb;sb_price_type=total&">Booking</a></li>
+        <li class="extLink"><a href="https://www.studentuniverse.com">StudentUniverse</a></li>
+      </ul>
+      <br>
+      <p>Please tell us your flight/travel dates:</p>
+      <p><label for"departing">Departing</label>
+        <input class="inputbox" id="departing" type="date" name="departingDate" placeholder="mm/dd/yyyy">
+        <label for"returning">Returning</label>
+        <input class="inputbox" id="returning" type="date" name="returningDate" placeholder="mm/dd/yyyy">
+      </p>
+      <p>
+        <button class="buttonstyle" type="submit">Submit it</button>
+      </p>
+    </form>
+    </td>
+    <td class="st2">
+    <p class="title">- Calender preview -</p>
+      <!-- Calender btween departing and returning date -->
+      <!-- Including activities from step three -->
+
+    </td>
+  </tr>
+  <tr>
+    <td class="st2 midline">
+      <p class="title">
+        - Step three -
+      </p>
+      <p>Browse for interesting things/activities near your destinations:</p>
+    <p><a href="https://www.tripadvisor.com">Trip Advisor</a></p>
+    <form>
+      <ul>
+        <li><label for"name">Activity Name:</label>
+          <input class="inputbox" id="name" type="text" name="name"></li>
+        <li><label for"activity">Activity Date:</label>
+          <input class="inputbox" id="activity" type="date" name="Activity Date" placeholder="mm/dd/yyyy"></li>
+        <li><label for"time">Starting time:</label>
+          <input class="inputbox" id="time" type="time" name="Activity time" placeholder="--:--"></li>
+      </ul>
+      <p><button class="buttonstyle" id="addtocal">Add to calender</button></p>
+    </form>
+    </td>
+    <td class="st2">
+      <p class="title">
+        - Activity reminders -
+        <!-- Details about each activity -->
+      </p>
+    </td>
+  </tr>
+<tr>
+  <td class="st midline">
+    <p class="title">
+      - Step four -
+    </p>
+    <a href="checklist">Go to your Checklist</a>
+
+  </td>
+  <td class="st">
+    <div class="title">
+         <p>- Your Memo Book -</p>
+    </div>
+    <section class="memo-input">
+      <input class ="inputbox" type="text" placeholder="my memo...">
+      <button class="addbutton" type="submit">Add Memo</button>
+    </section>
+    <section class="memo-controls">
+      <button class="addbutton" id="memos-delete">Delete all</button>
+    </section>
+    <section class="memo-output">
+    </section>
+
+  </td>
+ </tr>
+</table>
+
+    <div class="title" style="color:white;text-align: center"><a style="color:white" href="final_itinerary">
+    <i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Continue to your Final Itinerary
+  </a></div>
+
+</div>
+
+<script type="text/javascript" src="/scripts/createMemo.js"></script>
+<script>
+  function initMap() {
+    var usMarker = {lat:37.0902, lng:-95.7129};
+    var map = new google.maps.Map(document.getElementById('googlemap'),{
+      zoom:2,
+      center:usMarker
+    });
+    var marker = new google.maps.Marker({
+      position:usMarker,
+      map:map
+    });
+  }
+</script>
+<script async defer
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDZAU5Lp85oXef70qJMranq-zeO-I2gvik&callback=initMap">
+</script>
+
+<% include partials/footer %>

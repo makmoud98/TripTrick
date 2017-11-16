@@ -1,0 +1,85 @@
+h1{
+	text-align: center;
+	font-family: 'Supermercado One', cursive;
+	color: white;
+}
+h1:hover{
+	color: #c3d2e0;
+}
+body{
+	margin:75px;
+	border: 10px solid #F1F1F1;
+	font-family: 'Sirin Stencil';
+	font-weight: 500;
+	color: #29384f;
+	/*background: url("https://bytebucket.org/fanyuzuo/cs424project/raw/fd82e74b25e875e740b73528bba8206ec35c034a/css/newyork.jpg?token=ead9ef36b0de9131ba40bcb622b24e5297681b2d") 20% fixed;*/
+	background: url("/background.jpg") 20% fixed;
+  	background-size: cover;
+}
+div{
+	background: rgba(255,255,255,0.79);
+	font-size: 110%;
+}
+.title{
+	text-transform: uppercase;
+	letter-spacing: 4px;
+	text-align: center;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(250, 250, 250, 0.75), rgba(0, 0, 0, 0));
+}
+
+
+ul.footer {
+	list-style-type: circle;
+	padding:20px;
+}
+li.footer {
+	display:block;
+	float:left;
+	padding:8px;
+	font-size: 14px;
+}
+li.footer:hover {
+	cursor:pointer;
+	color:#900;
+}
+a:visited{
+	color: #191970;
+}
+a:link{
+	color: #191970;
+}
+
+
+a.footer {
+	color:white;
+}
+a.footer:hover {
+	color:#900;
+}
+
+.texts{
+	padding: 20px 30px;
+}
+
+.signout:visited{
+	color: white;
+}
+
+
+.display{
+	text-align: right;
+	padding-right: 3%;
+	font-family: 'Supermercado One', cursive;
+	color: white;
+	background-color: transparent;
+}
+#space{
+	content:" "; 
+    display:inline-block; 
+    width:32px;
+}

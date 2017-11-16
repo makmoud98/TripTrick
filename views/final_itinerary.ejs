@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Final Itinerary</title>
+	<link rel="stylesheet" type="text/css" href="/final_itinerary.css">
+	<link href="https://fonts.googleapis.com/css?family=Sirin+Stencil|Supermercado+One" rel="stylesheet">
+	<script
+			  src="https://code.jquery.com/jquery-3.2.1.min.js"
+			  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+			  crossorigin="anonymous"></script>
+	<script src="https://use.fontawesome.com/a2e6c95c8f.js"></script>
+	<!-- Unfinished -->
+</head>
+<body>
+<div class="display">
+    Welcome back, <%= currentUser %> ! 
+    <span id="space">  </span>
+    <a class="signout" href="/logout">Sign Out</a>
+</div>
+<h1>- Your Final Itinerary -</h1>
+<hr>
+<div>
+	<p class="title">
+		- Map version -
+	</p>
+</div>
+<div>
+	<p class="title">
+		- Calender version -
+	</p>
+</div>
+<div>
+
+		<td><a href="guide_page"><i class="fa fa-paper-plane" aria-hidden="true"></i> Return to the Itinerary Page</a></td>
+
+
+</div>
+
+<% include partials/footer %>

@@ -1,0 +1,190 @@
+h1{
+	text-align: center;
+	font-family: 'Supermercado One', cursive;
+	color: white;
+	
+}
+
+h1:hover{
+	color: #c3d2e0;
+}
+
+td{
+	padding: 0% 4.15%;
+	float: left;
+	border-bottom: 1px solid #F1F1F1;
+	height:220px;
+	width: 41%;
+	text-align: center;
+
+
+}
+body{
+	margin:70px;
+	border: 10px solid #F1F1F1;
+	font-family: 'Sirin Stencil', cursive;
+	font-weight: 500;
+	color: #29384f;
+	/*background: url("https://bytebucket.org/fanyuzuo/cs424project/raw/fd82e74b25e875e740b73528bba8206ec35c034a/css/newyork.jpg?token=ead9ef36b0de9131ba40bcb622b24e5297681b2d") 20% fixed;*/
+	background: url("/background.jpg") 20% fixed;
+  	background-size: cover;
+}
+/*<!-- http://www.bitrebels.com/wp-content/uploads/2011/05/Aerial-Photography-City-View-1.jpg -->*/
+
+.midline{
+	border-right: 1px solid #F1F1F1;
+}
+table{
+	background: rgba(255,255,255,0.78);
+	font-size: 110%;
+}
+h1{
+	color: white;
+}
+a:visited{
+	color: #191970;
+}
+a:link{
+	color: #191970;
+}
+.title{
+	text-transform: uppercase;
+	letter-spacing: 4px;
+	font-size: 130%;
+	font-weight:bold;
+}
+.st{
+	height:270px;
+}
+.st2{
+	height:350px;
+}
+input[type="date"]{
+	width: 28%;
+	font-family: 'Sirin Stencil';
+}
+
+.extLink {
+	display:block;
+	float:left;
+	padding:3px;
+	font-size: 16px;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(250, 250, 250, 0.75), rgba(0, 0, 0, 0));
+}
+
+ul {
+	list-style-type:none;
+	text-align:left;
+}
+.inputbox {
+	border-radius:3px;
+	background-color:transparent;
+	border-color:#191970;
+	font-family: 'Sirin Stencil';
+	box-shadow: 0 0 3px gray;
+}
+
+.inputbox:hover{
+	box-shadow: 0 0 1em gray;
+}
+
+.buttonstyle {
+	border-radius:5px;
+	border:2px double;
+	color:#191970;
+	font-size:14px;
+	font-weight:bold;
+	font-family: 'Sirin Stencil';
+	background-color:transparent;
+	box-shadow: 0 0 1em gray;
+
+}
+.buttonstyle:hover {
+	cursor:pointer;
+	color:#900;
+	background-color:transparent;
+}
+.addbutton {
+	border-radius: 2.5px;
+	border-color: #191970;
+	font-family: 'Sirin Stencil';
+	background-color: transparent;
+	padding: inherit;
+	font-weight:bolder;
+	font-size:11px;
+	color: #29384f;
+	text-align:center;
+}
+.addbutton:hover {
+	cursor:pointer;
+	color:#900;
+	border-color: #900;
+	background-color:transparent;
+}
+
+.memo-output {
+	text-align:left;
+	font-size: 14px;
+
+}
+
+
+ul.footer {
+	list-style-type: circle;
+	padding:20px;
+}
+li.footer {
+	display:block;
+	float:left;
+	padding:8px;
+	font-size: 14px;
+}
+li.footer:hover {
+	cursor:pointer;
+	color:#900;
+}
+a.footer {
+	color:white;
+}
+a.footer:hover {
+	color:#900;
+}
+
+.signout:visited{
+	color: white;
+}
+
+.display{
+	text-align: right;
+	padding-right: 3%;
+	font-family: 'Supermercado One', cursive;
+	color: white;
+}
+#space{
+	content:" "; 
+    display:inline-block; 
+    width:32px;
+}
+
+#calendar {
+	font-size: 14px;
+}
+
+#calendar a[data-goto] {
+	color: inherit;
+}
+
+#calendar .fc-event {
+	/* adjust hue */
+	background-color: #3b91ad; 
+	border-color: #3b91ad;
+}
+
+#calendar .fc-event:hover {
+	text-decoration: none; /* undo a previous rule */
+}

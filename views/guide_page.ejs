@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <base target="_blank">
+  <title>Guide page</title>
+  <link rel="stylesheet" type="text/css" href="/guide_page.css">
+  <link href="https://fonts.googleapis.com/css?family=Sirin+Stencil|Supermercado+One" rel="stylesheet">
+  <link href='https://fullcalendar.io/js/fullcalendar-3.1.0/fullcalendar.min.css' rel='stylesheet' />
+  <script
+			  src="https://code.jquery.com/jquery-3.2.1.min.js"
+			  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+			  crossorigin="anonymous"></script>
+  <script src="https://use.fontawesome.com/a2e6c95c8f.js"></script>
+</head>
+<body>
+<header>
+  <div class="display">
+    Welcome back, <%= currentUser %> ! 
+    <span id="space">  </span>
+    <a class="signout" href="/logout">Sign Out</a>
+    </div>
+  <h1>- Start Planning your Trip -</h1>
+  <hr>
+</header>
+<table style="width:100%">
+  <tr>
+  <td class="st midline">
+    <p class="title">
+      - Step One -
+    </p>
+    <p><a href="https://www.google.com/maps/@42.0046787,-87.6482463,15z">Click me: Map Your Trip</a></p>
+    <form method="POST" enctype="application/x-www-form-urlencoded" target="_self">
+      <label for "map">Paste the URL of your finished map here:</label>
+      <input class="inputbox" id="map" type="url" name="map" placeholder="Paste URL here">
+      <input type="hidden" name="location" id="location" value="<%=JSON.stringify(location)%>"/>
+      <input type="hidden" name="type" id="type" value="map"/>
+      <p>
+        <button class="buttonstyle" name="submitmap" id="submitmap" type="submit">Submit it</button>
+      </p>
+    </form>
+  </td>
+  <td class="st">
+  <p class="title">- Map preview -</p>
+    <!-- image of user's map https://maps.googleapis.com/maps/api/staticmap?size=300x180&center=ny -->
+   <image src="https://maps.googleapis.com/maps/api/staticmap?size=300x180&center=<%=location.lat + "," + location.long + "&zoom=" + location.zoom%>"/>
+   </td>
+  </tr>
+  <tr>
+    <td class="st2 midline">
+      <p class="title">
+        - Step Two -
+    </p>
+    <form method="POST" enctype="application/x-www-form-urlencoded" target="_self">
+      <p>Please choose a site to book your flight (if you need to):</p>
+      <ul>
+        <li class="extLink"><a href="https://www.priceline.com">Priceline</a></li>
+        <li class="extLink"><a href="https://www.expedia.com">Expedia</a></li>
+        <li class="extLink"><a href="https://www.kayak.com">Kayak</a></li>
+        <li class="extLink"><a href="http://www.booking.com/index.html?label=gen173nr-1FCAEoggJCAlhYSDNiBW5vcmVmcgV1c19pbIgBAZgBMrgBB8gBDdgBAegBAfgBC6gCAw;sid=4ea7efe512c1815c383d093aa1dbc9eb;sb_price_type=total&">Booking</a></li>
+        <li class="extLink"><a href="https://www.studentuniverse.com">StudentUniverse</a></li>
+      </ul>
+      <br>
+      <p>Please tell us your flight/travel dates:</p>
+      <p><label for"departing">Departing</label>
+        <input class="inputbox" id="departing" type="date" name="departing" placeholder="mm/dd/yyyy">
+        <label for"returning">Returning</label>
+        <input class="inputbox" id="returning" type="date" name="returning" placeholder="mm/dd/yyyy">
+        <input type="hidden" name="type" id="type" value="flight"/>
+      </p>
+      <p>
+        <button id="submitflight" class="buttonstyle" type="submit">Submit it</button>
+      </p>
+    </form>
+    </td>
+    <td class="st2">
+    <p class="title">- Calender preview -</p>
+      <!-- Calender btween departing and returning date -->
+      <br/>
+      <br/>
+      <iframe
+        width="700" height="600"
+        frameborder="0" style="border:0"
+        src="/calendar">
+      </iframe>
+      <!-- Including activities from step three -->
+    </td>
+  </tr>
+  <tr>
+    <td class="st2 midline">
+      <p class="title">
+        - Step three -
+      </p>
+      <p>Browse for interesting things/activities near your destinations:</p>
+    <p><a href="https://www.tripadvisor.com">Trip Advisor</a></p>
+    <form method="POST" enctype="application/x-www-form-urlencoded" target="_self">
+      <ul>
+        <li><label for"name">Activity Name:</label>
+          <input class="inputbox" id="name" type="text" name="name"></li>
+        <li><label for"activity">Activity Date:</label>
+          <input class="inputbox" id="date" type="date" name="date" placeholder="mm/dd/yyyy"></li>
+        <li><label for"time">Starting time:</label>
+          <input class="inputbox" id="time" type="time" name="time" placeholder="--:--"></li>
+      </ul>
+      <input type="hidden" name="type" id="type" value="activity"/>
+      <p><button class="buttonstyle" id="addtocal">Add to calender</button></p>
+    </form>
+    </td>
+  </tr>
+<tr>
+  <td class="st midline">
+    <p class="title">
+      - Step four -
+    </p>
+    <a href="checklist" target="_self">Go to your Checklist</a>
+
+  </td>
+  <td class="st">
+    <p class="title">
+         - Your Memo Book -
+    </p>
+    <a href="memos" target="_self">Go to your Memos</a>
+  </td>
+ </tr>
+</table>
+
+    <div class="title" style="color:white;text-align: center"><a style="color:white" href="final_itinerary">
+    <i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Continue to your Final Itinerary
+  </a></div>
+
+</div>
+
+
+<script type="text/javascript" src="/scripts/mapUpdater.js"></script>
+<% include partials/footer %>

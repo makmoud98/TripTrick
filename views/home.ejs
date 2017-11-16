@@ -1,0 +1,63 @@
+<html >
+<head>
+  <meta charset="UTF-8">
+  <meta name="google-signin-client_id" content="145653391986-unitajttoheogooi03psoghbu03sqcj7.apps.googleusercontent.com">
+  <title>TripTrick</title>
+
+        <link rel="stylesheet" href="/home.css">
+        <link href="https://fonts.googleapis.com/css?family=Sirin+Stencil|Supermercado+One" rel="stylesheet">
+        <script
+			  src="https://code.jquery.com/jquery-3.2.1.min.js"
+			  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+			  crossorigin="anonymous"></script>
+
+      <style>
+
+    </style>
+</head>
+
+<body>
+<h1> Welcome to Trip Trick! </h1>
+<h2> Your trip organizer </h2>
+
+<table style="width: 100%">
+	<tr>
+		<td>
+
+		 <div class="wrapper">
+  <form class="login" action="/" method="POST">
+    <p class="title">TripTrick</p>
+    <input type="text" placeholder="Username" name="username" autofocus/>
+    <i class="fa fa-user"></i>
+    <input type="password" placeholder="Password" name="password" />
+    <i class="fa fa-key"></i>
+    <a href="#">Forgot your password?</a>
+    <p><a href="/register">Register</a></p>
+    <button>
+      <i class="spinner"></i>
+      <span class="state">Log in</span>
+    </button>
+    <div class="g-signin2" data-onsuccess="onSignIn"></div>
+  </form>
+  </p>
+</div>
+
+
+
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+  <script src="https://apis.google.com/js/platform.js" async defer></script>
+
+    <script src="css/index.js"></script>
+
+
+		</td>
+		<td>
+
+
+
+
+		</td>
+	</tr>
+</table>
+
+<% include partials/footer %>

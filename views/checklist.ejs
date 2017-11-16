@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Checklist</title>
+	<link rel="stylesheet" type="text/css" href="checklist.css">
+	<link href="https://fonts.googleapis.com/css?family=Sirin+Stencil|Supermercado+One" rel="stylesheet">
+	<script
+			  src="https://code.jquery.com/jquery-3.2.1.min.js"
+			  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+			  crossorigin="anonymous"></script>
+	<script src="https://use.fontawesome.com/a2e6c95c8f.js"></script>
+
+</head>
+<body>
+<div class="display">
+    Welcome back, <%= currentUser %> ! 
+    <span id="space">  </span>
+    <a class="signout" href="/logout">Sign Out</a>
+    </div>
+<h1>- Checklist -</h1>
+<hr> 
+<form action="/checklist" method="POST" enctype="application/x-www-form-urlencoded"> 
+<table style="width:100%">
+<% items.forEach(function(item){ %>
+	<tr><td>
+		<div class="<%=(item.crossed ? "checked" : "")%>" value="<%=item.name%>")>
+		<span><i class="fa fa-trash-o" aria-hidden="true"></i></span><%=item.name%></div>
+	</td></tr>
+<% }); %>
+</table>
+<input type="hidden" name="items" id="items" value="<%=JSON.stringify(items)%>"/>
+<table style="width:100%">
+	<div>
+		<td class="newrow">
+
+		</td>
+	</div>
+</table>
+
+
+<ul class="buttons">
+	<p>
+		<label for"newitem">Add a new item: </label>
+		<input class="inputbox" id="newitem" type="text" name="newitem" placeholder="Item name">
+		<button id="add" type="button" class="buttonstyle">Add</button>
+	</p>
+	<p>
+		<button id="save" class="buttonstyle" type="submit">Save Checklist</button>
+	</p>
+	<a href="guide_page"><i class="fa fa-paper-plane" aria-hidden="true"></i> Return to the Guide Page</a>
+</ul>
+</form>
+
+<script type="text/javascript" src="scripts/checklist.js"></script>
+<% include partials/footer %>
+
