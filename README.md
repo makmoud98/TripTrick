@@ -1,12 +1,10 @@
-a website meant to help with planning a trip created with expressJs (a nodejs module) for my friend's final project.
+a website meant to help with planning a trip created with expressJs (a nodejs module) for a final project.
 
 it was a *group* project where i did 90% of the actual javascript. the other guys just designed the website and wrote most of the html, putting some ground work for me
 
 the website works with a mongodb database alongside expressJs (and many other modules including bluebird and passport)
 
-this was my first time using expressJs and I learned a lot from working on this. unfortunately I was not really given enough time to get all the features 100% working. 
-
-It was mostly done just as a big favor for a good friend of mine.
+this was my first time using expressJs and I learned a lot from working on this. there are a few minor glitches here and there but it works pretty good overall.
 
 features:
 
